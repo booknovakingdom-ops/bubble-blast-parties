@@ -140,7 +140,7 @@ footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center;border
 <input type="hidden" name="subject" value="New quote request — Bubble Blast Parties">
 <input type="hidden" name="from_name" value="Bubble Blast Parties website">
 <input type="hidden" name="redirect" value="https://bubbleblastparties.ca/thanks.html">
-<input class="hp" tabindex="-1" autocomplete="off" type="text" name="botcheck" id="website">
+<input class="hp" tabindex="-1" autocomplete="off" type="text" name="botcheck" id="bbp-hp" aria-hidden="true">
 <label for="q-name">Name</label>
 <input id="q-name" name="name" type="text" required>
 <div class="row">
@@ -165,7 +165,10 @@ var form = document.getElementById('quoteForm');
 var status = document.getElementById('quoteStatus');
 var accessKeyField = form.elements['access_key'];
 form.addEventListener('submit', function(e){
-if (document.getElementById('website').value) { e.preventDefault(); return; } // honeypot tripped
+// Web3Forms already checks the botcheck field server-side as its own
+// spam filter, so submission isn't gated on it here — a prior version
+// did, and real visitors were getting silently blocked because browsers
+// can autofill a hidden field whose id looks like a known one ("website").
 if (!accessKeyField.value) {
 e.preventDefault();
 status.hidden = false;
