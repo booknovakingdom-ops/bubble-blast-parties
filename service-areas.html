@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Where We Serve | Bubble Blast Parties Service Areas</title>
+<meta name="description" content="Bubble Blast Parties brings foam party rentals across Nova Scotia, New Brunswick and Prince Edward Island. Find your town and get a free quote.">
+<link rel="canonical" href="https://bubbleblastparties.ca/service-areas.html">
+<meta property="og:title" content="Where We Serve | Bubble Blast Parties Service Areas">
+<meta property="og:description" content="Foam party rentals across Nova Scotia, New Brunswick and Prince Edward Island.">
+<meta property="og:url" content="https://bubbleblastparties.ca/service-areas.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://bubbleblastparties.ca/assets/og-image.jpg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<meta name="theme-color" content="#0aa5d8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header><div class="wrap"><a href="/" class="logo"><img src="assets/logo-96.png" alt="" width="40" height="40">Bubble <span>Blast</span> Parties</a><nav class="sitenav"><a href="/#how">How it works</a><a href="/#faq">FAQ</a><a href="/#quote">Get a quote</a></nav><a class="btn" href="tel:+19029900005">Call 902-990-0005</a></div></header>
+<main>
+<div class="hero compact"><div class="blob"></div><div class="blob b2"></div><div class="wrap">
+<p class="breadcrumbs"><a href="/">Home</a> &rsaquo; Service areas</p>
+<span class="eyebrow">Atlantic Canada</span>
+<h1>Where we serve</h1>
+<p>From our home base in Bridgewater, NS, we travel across Nova Scotia, New Brunswick and Prince Edward Island. Find your town below, or just get a quote and tell us where you are.</p>
+<a class="btn" href="/#quote">Get a free quote</a>
+</div></div>
+<section class="reveal"><div class="wrap">
+<h2>Nova Scotia</h2>
+<ul class="town-list">
+<li><a href="foam-party-halifax-ns.html">Halifax, NS</a></li>
+<li><a href="foam-party-dartmouth-ns.html">Dartmouth, NS</a></li>
+<li><a href="foam-party-bridgewater-ns.html">Bridgewater, NS</a></li>
+<li><a href="foam-party-lunenburg-ns.html">Lunenburg, NS</a></li>
+<li><a href="foam-party-liverpool-ns.html">Liverpool, NS</a></li>
+<li><a href="foam-party-yarmouth-ns.html">Yarmouth, NS</a></li>
+<li><a href="foam-party-kentville-ns.html">Kentville, NS</a></li>
+<li><a href="foam-party-truro-ns.html">Truro, NS</a></li>
+<li><a href="foam-party-new-glasgow-ns.html">New Glasgow, NS</a></li>
+<li><a href="foam-party-antigonish-ns.html">Antigonish, NS</a></li>
+<li><a href="foam-party-sydney-ns.html">Sydney, NS</a></li>
+<li><a href="foam-party-amherst-ns.html">Amherst, NS</a></li>
+</ul>
+</div></section>
+<section class="reveal"><div class="wrap">
+<h2>New Brunswick &amp; Prince Edward Island</h2>
+<ul class="town-list">
+<li><a href="foam-party-moncton-nb.html">Moncton, NB</a></li>
+<li><a href="foam-party-saint-john-nb.html">Saint John, NB</a></li>
+<li><a href="foam-party-charlottetown-pe.html">Charlottetown, PE</a></li>
+</ul>
+</div></section>
+<section class="reveal"><div class="wrap">
+<p style="color:var(--muted)">Don't see your town? We likely still cover it — <a href="/#quote">request a quote</a> with your location and we'll confirm.</p>
+</div></section>
+</main>
+<footer><div class="wrap">&copy; <span id="y"></span> Bubble Blast Parties &middot; Bridgewater, Nova Scotia &middot; <a href="tel:+19029900005">902-990-0005</a> &middot; <a href="mailto:eventsbubbleblast@gmail.com">eventsbubbleblast@gmail.com</a></div></footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){ entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.15 });
+  var els = document.querySelectorAll('.reveal');
+  els.forEach(function(el){ io.observe(el); });
+  setTimeout(function(){ els.forEach(function(el){ el.classList.add('in'); }); }, 3000);
+} else {
+  document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+}
+</script>
+</body>
+</html>
