@@ -135,7 +135,7 @@ footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center;border
 <a class="btn" href="tel:+19029900005">Call 902-990-0005</a>
 <a class="btn ghost" href="mailto:eventsbubbleblast@gmail.com">eventsbubbleblast@gmail.com</a>
 </div>
-<form id="quoteForm" class="quote-form">
+<form id="quoteForm" class="quote-form" method="POST" action="https://api.web3forms.com/submit" target="qfFrame">
 <input type="hidden" name="access_key" value="6af73f8b-c36e-4967-8e98-904820483823">
 <input type="hidden" name="subject" value="New quote request — Bubble Blast Parties">
 <input type="hidden" name="from_name" value="Bubble Blast Parties website">
@@ -158,41 +158,39 @@ footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center;border
 </form>
 <p id="quoteStatus" class="quote-status" hidden></p>
 </div></div></section>
+<iframe name="qfFrame" id="qfFrame" title="" style="display:none" aria-hidden="true"></iframe>
 <script>
 (function(){
 var form = document.getElementById('quoteForm');
 var status = document.getElementById('quoteStatus');
+var frame = document.getElementById('qfFrame');
 var accessKeyField = form.elements['access_key'];
+var submitBtn = form.querySelector('button[type=submit]');
+var awaitingResponse = false;
 form.addEventListener('submit', function(e){
-e.preventDefault();
-if (document.getElementById('website').value) return; // honeypot tripped
+if (document.getElementById('website').value) { e.preventDefault(); return; } // honeypot tripped
 if (!accessKeyField.value) {
+e.preventDefault();
 status.hidden = false;
 status.textContent = 'Form is not connected yet — please call or email us directly for now.';
 return;
 }
-var submitBtn = form.querySelector('button[type=submit]');
+// Let the browser submit the form natively into the hidden iframe below.
+// Web3Forms' API doesn't return CORS headers for every key/domain, so a
+// fetch() call can't reliably read the response — a plain form POST
+// sidesteps that entirely since the browser isn't allowed to read cross-origin
+// iframe content either way, and we don't need it to.
+awaitingResponse = true;
 submitBtn.disabled = true;
-fetch('https://api.web3forms.com/submit', {
-method: 'POST',
-headers: { 'Accept': 'application/json' },
-body: new FormData(form)
-})
-.then(function(r){ return r.json(); })
-.then(function(result){
 status.hidden = false;
-if (result.success) {
+status.textContent = 'Sending…';
+});
+frame.addEventListener('load', function(){
+if (!awaitingResponse) return; // ignore the iframe's initial blank load
+awaitingResponse = false;
+submitBtn.disabled = false;
 status.textContent = 'Thanks! We got your request and will be in touch soon.';
 form.reset();
-} else {
-status.textContent = 'Something went wrong — please call or email us directly.';
-}
-})
-.catch(function(){
-status.hidden = false;
-status.textContent = 'Something went wrong — please call or email us directly.';
-})
-.finally(function(){ submitBtn.disabled = false; });
 });
 })();
 </script>
