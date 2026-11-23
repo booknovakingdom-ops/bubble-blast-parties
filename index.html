@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en-CA">
 <head>
+<script>document.documentElement.classList.add('js')</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bubble Blast Parties | Foam Party Rentals in Atlantic Canada</title>
@@ -13,27 +14,65 @@
 <meta property="og:image" content="https://bubbleblastparties.ca/assets/og-image.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<meta name="theme-color" content="#0aa5d8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"Bubble Blast Parties","url":"https://bubbleblastparties.ca/","telephone":"+1-902-990-0005","email":"eventsbubbleblast@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Bridgewater","addressRegion":"NS","addressCountry":"CA"},"areaServed":"Atlantic Canada","description":"Foam party rentals for birthdays, schools and community events."}
 </script>
 <style>
-:root{--bg:#f4fbff;--ink:#0e2a3b;--muted:#46606f;--brand:#0aa5d8;--brand-d:#0780a8;--pop:#ff4f9a;--card:#fff;--line:#d5e7f0}
-@media (prefers-color-scheme:dark){:root{--bg:#07202e;--ink:#eaf6fc;--muted:#a6c0cd;--card:#0c2e40;--line:#1b4a63}}
-*{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
-.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
-header{padding:14px 0;border-bottom:1px solid var(--line)}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px}.logo span{color:var(--pop)}.logo img{display:block}
-.btn{display:inline-block;background:var(--pop);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:999px}
-.btn.alt{background:transparent;color:var(--brand-d);border:2px solid var(--brand)}
-.hero{padding:56px 0 40px;text-align:center;background:linear-gradient(180deg,#d9f3ff,transparent)}
+:root{--bg:#f4fbff;--ink:#0e2a3b;--muted:#46606f;--brand:#0aa5d8;--brand-d:#0780a8;--pop:#ff4f9a;--card:#fff;--line:#d5e7f0;--shadow:0 10px 30px -12px rgba(14,42,59,.18);--font-head:'Baloo 2',system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root{--bg:#07202e;--ink:#eaf6fc;--muted:#a6c0cd;--card:#0c2e40;--line:#1b4a63;--shadow:0 10px 30px -10px rgba(0,0,0,.5)}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+h1,h2,h3,.logo,.btn{font-family:var(--font-head)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;padding:14px 0;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:21px}.logo span{color:var(--pop)}.logo img{display:block}
+nav.sitenav{display:flex;gap:26px;margin-right:auto;margin-left:28px}
+nav.sitenav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+nav.sitenav a:hover{color:var(--brand-d)}
+@media (max-width:760px){nav.sitenav{display:none}}
+.btn{display:inline-block;background:var(--pop);color:#fff;text-decoration:none;font-weight:700;padding:13px 24px;border-radius:999px;box-shadow:0 8px 20px -6px rgba(255,79,154,.55);transition:transform .15s ease,box-shadow .15s ease;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -6px rgba(255,79,154,.6)}
+.btn:active{transform:translateY(0)}
+.btn.alt{background:transparent;color:var(--brand-d);border:2px solid var(--brand);box-shadow:none}
+.btn.alt:hover{background:color-mix(in srgb,var(--brand) 12%,transparent)}
+.eyebrow{display:inline-block;color:var(--pop);font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin-bottom:8px}
+.hero{position:relative;padding:72px 0 48px;text-align:center;background:linear-gradient(180deg,#d9f3ff,transparent);overflow:hidden}
 @media (prefers-color-scheme:dark){.hero{background:linear-gradient(180deg,#0b3a52,transparent)}}
-h1{font-size:clamp(32px,6vw,54px);line-height:1.1;margin:0 0 14px}h1 em{color:var(--pop);font-style:normal}
-.hero p{max-width:620px;margin:0 auto 24px;color:var(--muted);font-size:18px}.hero .btn{margin:4px}
-section{padding:40px 0}h2{font-size:28px;margin:0 0 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px}.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--muted)}
-ol{padding-left:20px}li{margin-bottom:8px}
-details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}
+.blob{position:absolute;border-radius:50%;filter:blur(40px);opacity:.5;pointer-events:none;z-index:0}
+.hero .blob{background:radial-gradient(circle,var(--pop),transparent 70%);width:280px;height:280px;top:-80px;right:-60px}
+.hero .blob.b2{background:radial-gradient(circle,var(--brand),transparent 70%);width:260px;height:260px;bottom:-100px;left:-70px;opacity:.4}
+.hero .wrap{position:relative;z-index:1}
+h1{font-weight:800;font-size:clamp(32px,6vw,56px);line-height:1.08;margin:0 0 14px}h1 em{color:var(--pop);font-style:normal}
+.hero p{max-width:620px;margin:0 auto 26px;color:var(--muted);font-size:18px}.hero .btn{margin:4px}
+.badges{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 18px;margin-top:30px;font-size:14px;color:var(--muted);font-weight:600}
+.badges span{display:flex;align-items:center;gap:6px}
+section{padding:46px 0;scroll-margin-top:84px}
+h2{font-weight:700;font-size:30px;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:transform .2s ease,box-shadow .2s ease}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.card .emoji{font-size:30px;display:block;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:18px;font-weight:700}.card p{margin:0;color:var(--muted)}
+.steps{display:grid;gap:18px;padding:0;list-style:none;counter-reset:step}
+.steps li{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.steps li::before{counter-increment:step;content:counter(step);flex:none;width:36px;height:36px;border-radius:50%;background:var(--brand);color:#fff;font-family:var(--font-head);font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps b{display:block;margin-bottom:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:10px;transition:box-shadow .2s ease}
+details[open]{box-shadow:var(--shadow)}
+summary{cursor:pointer;font-weight:700;padding:14px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--pop);transition:transform .2s ease;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 16px;color:var(--muted)}
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1!important;transform:none!important;transition:none!important}}
 .cta{background:var(--brand);color:#fff;text-align:center;border-radius:20px;padding:36px 20px}.cta .btn{background:#fff;color:var(--brand-d)}
 .btn.ghost{background:transparent;color:#fff;border:2px solid #fff}
 .cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
@@ -50,33 +89,46 @@ footer{padding:30px 0;color:var(--muted);font-size:14px;text-align:center;border
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="logo"><img src="assets/logo-96.png" alt="" width="40" height="40">Bubble <span>Blast</span> Parties</div><a class="btn" href="tel:+19029900005">Call 902-990-0005</a></div></header>
+<header><div class="wrap"><div class="logo"><img src="assets/logo-96.png" alt="" width="40" height="40">Bubble <span>Blast</span> Parties</div><nav class="sitenav"><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="#quote">Get a quote</a></nav><a class="btn" href="tel:+19029900005">Call 902-990-0005</a></div></header>
 <main>
-<div class="hero"><div class="wrap">
+<div class="hero"><div class="blob"></div><div class="blob b2"></div><div class="wrap">
+<span class="eyebrow">Atlantic Canada's foam party crew</span>
 <h1>Mountains of foam. <em>Zero</em> cleanup stress.</h1>
 <p>Foam parties for birthdays, school events, graduations and community days across Atlantic Canada. We bring the foam machine, set it up and take it away.</p>
 <a class="btn" href="#quote">Get a free quote</a> <a class="btn alt" href="#how">How it works</a>
+<div class="badges">
+<span>&#128167; Full setup &amp; cleanup</span>
+<span>&#127788;&#65039; Wind-safe rescheduling</span>
+<span>&#127790; Serving Atlantic Canada</span>
+<span>&#127968; Locally owned</span>
+</div>
 </div></div>
-<section><div class="wrap"><h2>Perfect for</h2>
+<section class="reveal"><div class="wrap">
+<span class="eyebrow">Who it's for</span>
+<h2>Perfect for</h2>
 <div class="grid">
-<div class="card"><h3>Birthday parties</h3><p>Kids and teens get a party they will talk about all summer.</p></div>
-<div class="card"><h3>Schools &amp; daycares</h3><p>Field days, year-end celebrations and fundraisers.</p></div>
-<div class="card"><h3>Graduations</h3><p>A big finish for grads and their friends.</p></div>
-<div class="card"><h3>Community events</h3><p>Festivals, camps and church or club events.</p></div>
+<div class="card"><span class="emoji">&#127874;</span><h3>Birthday parties</h3><p>Kids and teens get a party they will talk about all summer.</p></div>
+<div class="card"><span class="emoji">&#127979;&#65039;</span><h3>Schools &amp; daycares</h3><p>Field days, year-end celebrations and fundraisers.</p></div>
+<div class="card"><span class="emoji">&#127891;</span><h3>Graduations</h3><p>A big finish for grads and their friends.</p></div>
+<div class="card"><span class="emoji">&#127881;</span><h3>Community events</h3><p>Festivals, camps and church or club events.</p></div>
 </div></div></section>
-<section id="how"><div class="wrap"><h2>How it works</h2>
-<ol>
-<li><b>Tell us your date and location.</b> We check availability.</li>
-<li><b>Get your quote.</b> No obligation.</li>
-<li><b>Pay the deposit.</b> Your date is held once the deposit is received.</li>
-<li><b>We set up and you party.</b> We take care of the rest.</li>
+<section id="how" class="reveal"><div class="wrap">
+<span class="eyebrow">The process</span>
+<h2>How it works</h2>
+<ol class="steps">
+<li><div><b>Tell us your date and location.</b> We check availability.</div></li>
+<li><div><b>Get your quote.</b> No obligation.</div></li>
+<li><div><b>Pay the deposit.</b> Your date is held once the deposit is received.</div></li>
+<li><div><b>We set up and you party.</b> We take care of the rest.</div></li>
 </ol></div></section>
-<section><div class="wrap"><h2>Good to know</h2>
+<section id="faq" class="reveal"><div class="wrap">
+<span class="eyebrow">Good to know</span>
+<h2>Frequently asked questions</h2>
 <details><summary>What do we need at the venue?</summary><p>A flat outdoor area and access to water and power. We will confirm the details when we quote.</p></details>
 <details><summary>What is the weather policy?</summary><p>Rentals follow a 38 km/h wind limit under our rental agreement. If the weather is unsafe, we will work out a new date with you.</p></details>
 <details><summary>Who runs Bubble Blast Parties?</summary><p>We're a locally owned foam party company based in Bridgewater, NS, serving events across Atlantic Canada.</p></details>
 </div></section>
-<section id="quote"><div class="wrap"><div class="cta">
+<section id="quote" class="reveal"><div class="wrap"><div class="cta">
 <h2>Ready to book your foam party?</h2>
 <p>Tell us your date, location and guest count and we'll send a quote &mdash; or call/email us directly.</p>
 <div class="cta-actions">
@@ -131,7 +183,20 @@ status.textContent = 'Something went wrong — please call or email us directly.
 })();
 </script>
 </main>
-<footer><div class="wrap">&copy; <span id="y"></span> Bubble Blast Parties · Bridgewater, Nova Scotia · <a href="tel:+19029900005">902-990-0005</a> · <a href="mailto:eventsbubbleblast@gmail.com">eventsbubbleblast@gmail.com</a></div></footer>
-<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+<footer><div class="wrap">&copy; <span id="y"></span> Bubble Blast Parties · Bridgewater, Nova Scotia · <a href="tel:+19029900005">902-990-0005</a> · <a href="mailto:eventsbubbleblast@gmail.com">eventsbubbleblast@gmail.com</a> · <a href="https://g.page/r/CZXOs7GUjxR5EBI/review" target="_blank" rel="noopener">Leave us a review</a></div></footer>
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+var revealEls = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(function(el){ io.observe(el); });
+  // Safety net: if something stops the observer from firing, don't leave content hidden.
+  setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add('in'); }); }, 3000);
+} else {
+  revealEls.forEach(function(el){ el.classList.add('in'); });
+}
+</script>
 </body>
 </html>
