@@ -173,11 +173,10 @@ return;
 }
 var submitBtn = form.querySelector('button[type=submit]');
 submitBtn.disabled = true;
-var payload = Object.fromEntries(new FormData(form).entries());
 fetch('https://api.web3forms.com/submit', {
 method: 'POST',
-headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-body: JSON.stringify(payload)
+headers: { 'Accept': 'application/json' },
+body: new FormData(form)
 })
 .then(function(r){ return r.json(); })
 .then(function(result){
