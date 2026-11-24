@@ -59,7 +59,7 @@ details p{margin:0 0 16px;color:var(--muted)}
 .quote-form{max-width:560px;margin:0 auto;text-align:left;background:rgba(255,255,255,.12);border-radius:16px;padding:20px}
 .quote-form .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .quote-form label{display:block;font-size:13px;font-weight:700;margin:10px 0 4px}
-.quote-form input,.quote-form textarea{width:100%;padding:10px 12px;border-radius:10px;border:1px solid transparent;font:inherit;background:#fff;color:#0e2a3b}
+.quote-form input,.quote-form textarea,.quote-form select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid transparent;font:inherit;background:#fff;color:#0e2a3b}
 .quote-form textarea{min-height:70px;resize:vertical}
 .quote-form button{margin-top:16px;width:100%;border:none;font:inherit;cursor:pointer}
 .quote-status{max-width:560px;margin:14px auto 0;font-weight:700}

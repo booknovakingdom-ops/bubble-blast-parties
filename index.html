@@ -144,14 +144,27 @@
 <input type="hidden" name="botcheck" value="">
 <label for="q-name">Name</label>
 <input id="q-name" name="name" type="text" required>
+<label for="q-package">Package</label>
+<select id="q-package" name="package">
+<option value="">Not sure — recommend one</option>
+<option>Blast-To-Go Mini</option>
+<option>Blast-To-Go Max</option>
+<option>Bubble Blast Starter</option>
+<option>Bubble Blast Classic</option>
+<option>Mega Blast</option>
+<option>Mega Blast Plus</option>
+<option>Ultimate Blast</option>
+</select>
 <div class="row">
 <div><label for="q-phone">Phone</label><input id="q-phone" name="phone" type="tel" required></div>
 <div><label for="q-email">Email (optional)</label><input id="q-email" name="email" type="email"></div>
 </div>
 <div class="row">
 <div><label for="q-date">Event date</label><input id="q-date" name="eventDate" type="date" required></div>
-<div><label for="q-guests">Guest count (approx.)</label><input id="q-guests" name="guests" type="number" min="1"></div>
+<div><label for="q-guests">Guest count in the foam (approx.)</label><input id="q-guests" name="guests" type="number" min="1"></div>
 </div>
+<label for="q-attendants">Additional attendants <span style="font-weight:400">(parents, staff etc. not in the foam, approx.)</span></label>
+<input id="q-attendants" name="additionalAttendants" type="number" min="0">
 <label for="q-location">Event location (town)</label>
 <input id="q-location" name="location" type="text" required>
 <label for="q-message">Anything else?</label>
